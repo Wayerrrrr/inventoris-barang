@@ -35,7 +35,7 @@
                 <div class="overflow-hidden py-5">
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left rtl:text-right text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default whitespace-nowrap bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default whitespace-nowrap bg-blue-500">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
