@@ -1,10 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Inventaris Barang') }}
-        </h2>
-    </x-slot>
-
     @if(session()->has('success'))
     <div class="py-6 pb-0">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -36,9 +30,10 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h2 class="font-semibold text-xl text-gray-800">
-                        {{ __('Edit Barang') }}
-                    </h2>
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-2xl font-semibold text-heading">Edit Barang</h1>
+                        <a href="{{route('barang.index')}}" class="py-2 px-3 font-medium text-sm text-fg-brand hover:underline">Kembali</a>
+                    </div>
                     <form action="{{ route('barang.update', $barang->id) }}" method="POST" class="pt-5">
                         @csrf
                         @method('PUT')
@@ -100,7 +95,7 @@
                         </div>
 
                         <div class="pt-4">
-                            <button class="border py-2 px-3 rounded-lg text-white bg-slate-700">
+                            <button class="border py-2 px-3 rounded-lg text-white bg-green-600 hover:bg-green-700 transition duration-300 ease-in hover:text-white">
                                 Simpan
                             </button>
                         </div>

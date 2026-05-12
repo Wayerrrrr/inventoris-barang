@@ -23,13 +23,13 @@
                 <div class="flex justify-between items-center">
                     <form action="{{ route('barang.index') }}" method="GET" class="flex gap-2">
                         <input type="text" name="search" placeholder="Cari Kode Barang" class="py-2 px-3 rounded-lg border border-default bg-neutral-primary text-body">
-                        <button class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-gray-700 hover:text-white">Cari</button>
+                        <button class="py-2 px-3 border border-default bg-neutral-tertiary text-grey rounded-lg transition duration-300 ease-in hover:bg-blue-500 hover:text-white">Cari</button>
                     </form>
                 </div>
                 <div class="overflow-hidden py-5">
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left rtl:text-right text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default whitespace-nowrap bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default whitespace-nowrap bg-blue-500">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -45,7 +45,7 @@
                             </thead>
                             <tbody>
                                 @foreach($barangs as $barang)
-                                <tr class="border-b border-default font-medium text-heading">
+                                <tr class="border-b border-default font-medium text-heading whitespace-nowrap">
                                     <td class="px-6 py-4">
                                         {{ $barang->kode_barang }}
                                     </td>
@@ -75,9 +75,9 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex gap-2">
-                                            <a href="{{route('barang.show', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-green-700 hover:text-white">
+                                            <a href="{{route('barang.show', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-grey rounded-lg transition duration-300 ease-in hover:bg-blue-500 hover:text-white">
                                                 View</a>
-                                            <a href="{{route('barang.edit', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-blue-500 hover:text-white">
+                                            <a href="{{route('barang.edit', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-grey rounded-lg transition duration-300 ease-in hover:bg-green-700 hover:text-white">
                                                 Update</a>
 
                                             <form action="{{route('barang.destroy', $barang->id)}}" method="POST">
@@ -162,7 +162,7 @@
                             class="block w-full py-2.5 px-3 border border-default rounded-lg bg-neutral-secondary-soft text-body focus:outline-none focus:border-fg-brand">
                     </div>
                     <div class="pt-2">
-                        <button type="submit" class="border border-default py-2 px-4 rounded-lg text-heading bg-neutral-tertiary transition duration-300 ease-in hover:bg-green-700 hover:text-white">Tambah Barang</button>
+                        <button type="submit" class="border border-default py-2 px-4 rounded-lg text-white bg-green-600 transition duration-300 ease-in hover:bg-green-700 hover:text-white">Tambah Barang</button>
                     </div>
                 </form>
             </div>
