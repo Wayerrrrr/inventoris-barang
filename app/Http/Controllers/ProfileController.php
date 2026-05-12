@@ -70,6 +70,14 @@ class ProfileController extends Controller
         $barangs_murah = Barang::orderBy('harga_jual', 'asc')->take(3)->get();
         $barangs_lowstock = Barang::orderBy('stok', 'asc')->take(3)->get();
         $barangs_highstock = Barang::orderBy('stok', 'desc')->take(3)->get();
-        return view('dashboard', compact('barangs', 'barangs_mahal', 'barangs_murah', 'barangs_lowstock', 'barangs_highstock'));
+        $barangs_expired = Barang::whereDate('expired_date', '<', now())->get();
+
+        $days = 10;
+        $barangs_expired_soon = Barang::whereBetween('expired_date', [
+            now(),
+            now()->addDays($days)
+        ])->get();
+
+        return view('dashboard', compact('barangs', 'barangs_mahal', 'barangs_murah', 'barangs_lowstock', 'barangs_highstock', 'barangs_expired', 'barangs_expired_soon'));
     }
 }

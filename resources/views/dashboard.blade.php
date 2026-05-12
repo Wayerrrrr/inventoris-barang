@@ -1,7 +1,87 @@
 <x-app-layout>
-    <!-- Kode Lama -->
     <div class="p-4 sm:ml-64">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="bg-neutral-primary overflow-hidden rounded-lg border border-default">
+                <div class="p-6 text-body">
+
+                    <div class="flex justify-between">
+                        <h2 class="font-semibold text-xl text-whitepb-3">
+                            {{ __('Barang Expired') }}
+                            <p class="font-medium text-sm underline">
+                                Menampilkan 3 Barang yang sudah Expired di Inventaris
+                            </p>
+                        </h2>
+
+                    </div>
+
+                    <div class="relative overflow-x-auto rounded-lg border border-default">
+                        <table class="w-full text-sm text-left text-body">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                                <tr>
+                                    <th class="px-6 py-5 font-medium">Kode</th>
+                                    <th class="px-6 py-5 font-medium">Nama</th>
+                                    <th class="px-6 py-5 font-medium">Kategori</th>
+                                    <th class="px-6 py-5 font-medium">Expired Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($barangs_expired as $barang)
+                                <tr class="border-b border-default font-medium">
+                                    <td class="px-6 py-4">{{ $barang->kode_barang }}</td>
+                                    <td class="px-6 py-4">{{ $barang->nama_barang }}</td>
+                                    <td class="px-6 py-4">{{ $barang->kategori }}</td>
+                                    <td class="px-6 py-4">
+                                        {{ $barang->expired_date }}
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-neutral-primary overflow-hidden rounded-lg border border-default">
+                <div class="p-6 text-body">
+
+                    <div class="flex justify-between">
+                        <h2 class="font-semibold text-xl text-whitepb-3">
+                            {{ __('Barang Mendekati Expired') }}
+                            <p class="font-medium text-sm underline">
+                                Menampilkan 3 Barang yang akan Expired dalam 10 hari ke depan
+                            </p>
+                        </h2>
+
+                    </div>
+
+                    <div class="relative overflow-x-auto rounded-lg border border-default">
+                        <table class="w-full text-sm text-left text-body">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                                <tr>
+                                    <th class="px-6 py-5 font-medium">Kode</th>
+                                    <th class="px-6 py-5 font-medium">Nama</th>
+                                    <th class="px-6 py-5 font-medium">Kategori</th>
+                                    <th class="px-6 py-5 font-medium">Expired Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($barangs_expired_soon as $barang)
+                                <tr class="border-b border-default font-medium">
+                                    <td class="px-6 py-4">{{ $barang->kode_barang }}</td>
+                                    <td class="px-6 py-4">{{ $barang->nama_barang }}</td>
+                                    <td class="px-6 py-4">{{ $barang->kategori }}</td>
+                                    <td class="px-6 py-4">
+                                        {{ $barang->expired_date }}
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
 
             <div class="bg-neutral-primary overflow-hidden rounded-lg border border-default">
                 <div class="p-6 text-body">

@@ -22,6 +22,7 @@ class BarangSeeder extends Seeder
             'satuan' => 'porsi',
             'harga_beli' => 15000,
             'harga_jual' => 25000,
+            'kategori' => 'Makanan',
         ]);
         Barang::create([
             'nama_barang' => 'Mie Goreng',
@@ -31,6 +32,8 @@ class BarangSeeder extends Seeder
             'satuan' => 'porsi',
             'harga_beli' => 12000,
             'harga_jual' => 22000,
+            'kategori' => 'Makanan',
+
         ]);
         Barang::create([
             'nama_barang' => 'Ayam Goreng',
@@ -40,6 +43,7 @@ class BarangSeeder extends Seeder
             'satuan' => 'porsi',
             'harga_beli' => 20000,
             'harga_jual' => 30000,
+            'kategori' => 'Makanan',
         ]);
     }
 }
