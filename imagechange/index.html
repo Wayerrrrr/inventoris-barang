@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="img.png" alt="" id="image">
+    <input type="text" id="inputName">
+
+    <button id="submits">Check</button>
+
+    <script>
+        console.log('test')
+        const image = document.getElementById('image')
+        const input = document.getElementById('inputName')
+        const buttonSubmit = document.getElementById('submits')
+
+        buttonSubmit.addEventListener('click', function () {
+            const inputValue = input.value
+
+            console.log('clicked')
+
+            if (inputValue) {
+                console.log('test')
+                image.src = "imgbiru.png"
+            }
+        })
+
+        
+    </script>
+</body>
+
+</html>
