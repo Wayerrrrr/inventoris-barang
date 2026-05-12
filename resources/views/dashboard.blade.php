@@ -9,7 +9,7 @@
                         <h2 class="font-semibold text-xl text-whitepb-3">
                             {{ __('Barang Expired') }}
                             <p class="font-medium text-sm underline">
-                                Menampilkan 3 Barang yang sudah Expired di Inventaris
+                                Menampilkan {{ $barangs_expired->count() }} Barang yang sudah Expired di Inventaris
                             </p>
                         </h2>
 
@@ -17,7 +17,7 @@
 
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-red-700">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -49,7 +49,7 @@
                         <h2 class="font-semibold text-xl text-whitepb-3">
                             {{ __('Barang Mendekati Expired') }}
                             <p class="font-medium text-sm underline">
-                                Menampilkan 3 Barang yang akan Expired dalam 10 hari ke depan
+                                Menampilkan {{ $barangs_expired_soon->count() }} Barang yang akan Expired dalam 10 hari ke depan
                             </p>
                         </h2>
 
@@ -57,7 +57,7 @@
 
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-red-700">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -90,7 +90,7 @@
                         <h2 class="font-semibold text-xl text-whitepb-3">
                             {{ __('Barang Termahal') }}
                             <p class="font-medium text-sm underline">
-                                Menampilkan 3 Barang Termahal di Inventaris
+                                Menampilkan {{ $barangs_mahal->count() }} Barang Termahal di Inventaris
                             </p>
                         </h2>
 
@@ -98,7 +98,7 @@
 
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-green-700">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -131,7 +131,7 @@
                         <h2 class="font-semibold text-xl text-whitepb-3">
                             {{ __('Barang Termurah') }}
                             <p class="font-medium text-sm underline">
-                                Menampilkan 3 Barang Termurah di Inventaris
+                                Menampilkan {{ $barangs_murah->count() }} Barang Termurah di Inventaris
                             </p>
                         </h2>
 
@@ -139,7 +139,7 @@
 
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-green-700">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -172,7 +172,7 @@
                         <h2 class="font-semibold text-xl text-whitepb-3">
                             {{ __('Barang dengan Stok Rendah') }}
                             <p class="font-medium text-sm underline">
-                                Menampilkan 3 Barang dengan Stok ter Rendah
+                                Menampilkan {{ $barangs_lowstock->count() }} Barang dengan Stok ter Rendah
                             </p>
                         </h2>
 
@@ -180,7 +180,7 @@
 
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-yellow-600">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -211,7 +211,7 @@
                         <h2 class="font-semibold text-xl text-whitepb-3">
                             {{ __('Barang dengan Stok Banyak') }}
                             <p class="font-medium text-sm underline">
-                                Menampilkan 3 Barang dengan Stok ter Banyak
+                                Menampilkan {{ $barangs_highstock->count() }} Barang dengan Stok ter Banyak
                             </p>
                         </h2>
 
@@ -219,7 +219,7 @@
 
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-yellow-600">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -265,7 +265,7 @@
                     <div class="relative overflow-x-auto rounded-lg border border-default">
                         <table class="w-full text-sm text-left text-body">
 
-                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-gray-700">
+                            <thead class="text-white bg-neutral-secondary-soft border-b border-default bg-blue-500">
                                 <tr>
                                     <th class="px-6 py-5 font-medium">Kode</th>
                                     <th class="px-6 py-5 font-medium">Nama</th>
@@ -298,7 +298,7 @@
                                     <td class="px-6 py-4">{{ $barang->expired_date }}</td>
                                     <td class="px-6 py-4">
                                         <a href="{{ route('barang.show', $barang->id) }}"
-                                            class="py-2 px-3 border border-default bg-neutral-tertiary text-grey rounded-lg hover:bg-neutral-tertiary-medium">
+                                            class="py-2 px-3 border border-default bg-neutral-tertiary text-grey rounded-lg transition duration-300 ease-in hover:bg-blue-500 hover:text-white">
                                             View
                                         </a>
                                     </td>

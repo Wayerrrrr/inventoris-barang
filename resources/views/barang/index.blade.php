@@ -75,9 +75,9 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex gap-2">
-                                            <a href="{{route('barang.show', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-gray-700 hover:text-white">
+                                            <a href="{{route('barang.show', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-green-700 hover:text-white">
                                                 View</a>
-                                            <a href="{{route('barang.edit', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-gray-700 hover:text-white">
+                                            <a href="{{route('barang.edit', $barang->id)}}" class="py-2 px-3 border border-default bg-neutral-tertiary text-heading rounded-lg transition duration-300 ease-in hover:bg-blue-500 hover:text-white">
                                                 Update</a>
 
                                             <form action="{{route('barang.destroy', $barang->id)}}" method="POST">
@@ -162,7 +162,7 @@
                             class="block w-full py-2.5 px-3 border border-default rounded-lg bg-neutral-secondary-soft text-body focus:outline-none focus:border-fg-brand">
                     </div>
                     <div class="pt-2">
-                        <button type="submit" class="border border-default py-2 px-4 rounded-lg text-heading bg-neutral-tertiary transition duration-300 ease-in hover:bg-gray-700 hover:text-white">Tambah Barang</button>
+                        <button type="submit" class="border border-default py-2 px-4 rounded-lg text-heading bg-neutral-tertiary transition duration-300 ease-in hover:bg-green-700 hover:text-white">Tambah Barang</button>
                     </div>
                 </form>
             </div>

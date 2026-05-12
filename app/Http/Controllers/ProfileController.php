@@ -65,14 +65,14 @@ class ProfileController extends Controller
 
     public function dashboard()
     {
-        $take_amount = 5;
+        $take_amounts = 5;
         $days = 10;
 
         $barangs = Barang::whereDate('created_at', '>', now()->subWeek())->latest()->take(3)->get();
-        $barangs_mahal = Barang::orderBy('harga_jual', 'desc')->take($take_amount)->get();
-        $barangs_murah = Barang::orderBy('harga_jual', 'asc')->take($take_amount)->get();
-        $barangs_lowstock = Barang::orderBy('stok', 'asc')->take($take_amount)->get();
-        $barangs_highstock = Barang::orderBy('stok', 'desc')->take($take_amount)->get();
+        $barangs_mahal = Barang::orderBy('harga_jual', 'desc')->take($take_amounts)->get();
+        $barangs_murah = Barang::orderBy('harga_jual', 'asc')->take($take_amounts)->get();
+        $barangs_lowstock = Barang::orderBy('stok', 'asc')->take($take_amounts)->get();
+        $barangs_highstock = Barang::orderBy('stok', 'desc')->take($take_amounts)->get();
         $barangs_expired = Barang::whereDate('expired_date', '<', now())->get();
 
         $barangs_expired_soon = Barang::whereBetween('expired_date', [
